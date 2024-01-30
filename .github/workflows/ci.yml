@@ -31,7 +31,7 @@ jobs:
           --health-retries 5
 
     steps:
-      - name: Check out code into the Go module directory
+      - name: Check out code
         uses: actions/checkout@v3
 
       - id: go
@@ -46,5 +46,5 @@ jobs:
       - name: Run Migrations
         run: make migrateup
 
-      - name: Test
+      - name: Run Test
         run: make test
